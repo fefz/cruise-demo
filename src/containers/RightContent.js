@@ -19,10 +19,11 @@ const RightContent = () => {
         getAgentData();
         //dispatch(getAgentData());
     },[]);
-    if(datafilter){
-        //setAgents(agents.filter(agent => agent.name.indexOf(datafilter) > -1));
-        console.log(datafilter);
-    }
+    React.useEffect(()=> {
+        getAgentList().then((data)=> {
+            setAgents(data.filter(agent => agent.name.indexOf(datafilter) > -1));
+        });
+    },[datafilter]);
     // const testData = useSelector(agentDataInfo());
     const agentProps = {
         agents,
