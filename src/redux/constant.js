@@ -1,4 +1,3 @@
-export const GET_AGENT_DATA = 'GET_AGENT_DATA';
-export const GET_AGENT_DATA_DONE = 'GET_AGENT_DATA';
-export const GET_AGENT_DATA_ERROR = 'GET_AGENT_DATA';
-export const REDUCER_KEY = 'cruise_demo';
+export const  GET_AGENTS_DATA = 'getAgentsData';
+export const  DELETE_AGENTS_DATA = 'deleteAgentsData';
+export const  UPDATE_AGENTS_DATA = 'updateAgentsData';

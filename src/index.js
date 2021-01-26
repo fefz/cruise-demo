@@ -1,16 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals';
+import { Provider } from "react-redux";
+import store from "./redux/store";
 import CruiseBox from "./containers";
+import reportWebVitals from './reportWebVitals';
 import "react-app-polyfill/ie11";
 import "react-app-polyfill/stable";
 import "./images/ASSETS/font icons/fonts.css";
 
 ReactDOM.render(
-  // <React.StrictMode>
-  //   <CruiseBox />
-  // </React.StrictMode>,
-  <CruiseBox />,
+  <React.StrictMode>
+    <Provider store={store}>
+      <CruiseBox />
+    </Provider>
+  </React.StrictMode>,
   document.getElementById('root')
 );
 
